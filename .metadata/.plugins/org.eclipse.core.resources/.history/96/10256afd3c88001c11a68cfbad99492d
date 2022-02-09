@@ -1,0 +1,8 @@
+
+public class BookManager {
+
+	public BookManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

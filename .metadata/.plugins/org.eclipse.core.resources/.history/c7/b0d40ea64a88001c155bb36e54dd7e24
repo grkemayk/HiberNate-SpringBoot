@@ -1,0 +1,32 @@
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.internal.SessionFactoryServiceRegistryBuilderImpl;
+public class main {
+
+	public static void main(String[] args) {
+		System.out.print("BASLADI\n");
+		SessionFactory factory = new Configuration() 
+				.configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Student.class)
+							.buildSessionFactory();
+			Session session = factory.getCurrentSession();
+			try {
+				Student student = new Student("Grkem","Aykac", "mail@mail.com");
+				session.beginTransaction();
+				session.save(student);
+				
+				Student student = new Student("Grkem","Aykac", "mail@mail.com");
+				session.beginTransaction();
+				session.save(student);
+
+				
+				session.getTransaction().commit();
+				
+			} finally {
+				factory.close();
+			}	
+			
+				}
+
+}

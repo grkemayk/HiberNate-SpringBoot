@@ -1,0 +1,11 @@
+package com.springboot.app;
+
+public class Test {
+	private DataBaseController xDataBaseController;
+	@Before
+	public void setUp()
+	{
+		xDataBaseController = new DataBaseController();
+	}
+
+}

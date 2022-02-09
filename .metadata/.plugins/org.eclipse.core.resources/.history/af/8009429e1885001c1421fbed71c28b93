@@ -1,0 +1,12 @@
+package com.springboot.app;
+import org.junit.Before;
+public class Test {
+	private DataBaseController xDataBaseController;
+
+	@BeforeEach
+	public void setUp()
+	{
+		xDataBaseController = new DataBaseController();
+	}
+
+}
