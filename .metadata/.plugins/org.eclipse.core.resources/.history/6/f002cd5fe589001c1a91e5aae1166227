@@ -13,7 +13,7 @@ public class main {
 				Student student = new Student("Grkem12","Aykac12", "mail@mail.com12");
 				session.beginTransaction();
 				session.save(student);
-				System.out.print("asdasdasd");
+				
 				//session.delete(student);
 				//session.update(student);
 				//Student xStudent = (Student)session.get(Student.class, 163840);
