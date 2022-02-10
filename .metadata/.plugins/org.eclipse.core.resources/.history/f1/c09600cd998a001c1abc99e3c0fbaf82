@@ -1,0 +1,12 @@
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "Students" , uniqueConstraints=
+@UniqueConstraint(columnNames = {"id"})) //Unique fieldlar burada belirlenir.
+public class Language {
+	
+	
+
+}

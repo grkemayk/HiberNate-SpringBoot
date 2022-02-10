@@ -1,0 +1,15 @@
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class main {
+
+	public static void main(String[] args) {
+		System.out.print("BASLADI\n");
+		 Configuration config = new Configuration();
+		 config.configure();
+		 SessionFactory sessionFactory = config.buildSessionFactory()
+		
+			
+				}
+
+}
