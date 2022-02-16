@@ -1,9 +1,0 @@
-package com.springboot.app;
-
-
-
-@RestController
-@RequestMapping("/myRest")
-public class MyRestController {
-
-}

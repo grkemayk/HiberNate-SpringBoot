@@ -1,0 +1,49 @@
+package com.springboot.app;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Hibernate {
+	private static Hibernate xGetInstance;
+	public static Hibernate vGetInstance()
+	{
+		if(xGetInstance == null)
+			xGetInstance = new Hibernate();
+		return xGetInstance;
+	}
+	private Hibernate()
+	{
+		config = new Configuration();
+		config.configure();
+		sessionFactory = config.buildSessionFactory();
+		session = sessionFactory.getCurrentSession();//DB ve tablolar olusturulur
+	}
+	Configuration config;
+	SessionFactory sessionFactory;
+	Session session;
+	public boolean bCreateDB()
+	{
+		try 
+		{
+		
+		} 
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+		finally 
+		{
+			sessionFactory.close();
+		}	
+		return true;
+	}
+	public void vInsert(Language xLanguage)
+	{
+		session.beginTransaction();
+		Language x = new Language("eng");
+		session.save(x);
+		session.getTransaction().commit();
+	}
+}

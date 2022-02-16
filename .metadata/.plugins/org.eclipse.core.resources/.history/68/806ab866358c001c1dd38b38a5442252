@@ -1,0 +1,7 @@
+package com.springboot.app;
+
+public class languagee {
+	public String Language;
+	public int Id;
+
+}

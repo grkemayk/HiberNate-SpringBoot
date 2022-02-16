@@ -1,0 +1,31 @@
+package com.springboot.app;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "Language" , uniqueConstraints=
+@UniqueConstraint(columnNames = {"id"}))
+public class Language {
+	
+	private int Id;
+	
+	private String Language;
+	
+	
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		Id = id;
+	}
+	public String getLanguage() {
+		return Language;
+	}
+	public void setLanguage(String language) {
+		Language = language;
+	}
+	
+
+}

@@ -1,0 +1,20 @@
+package com.springboot.app;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringbootFirstAppApplication {
+
+	public static void main(String[] args) {	
+		if(Hibernate.vGetInstance().bCreateDB() == true)
+		{
+			Language xLanguage = new Language("eng");
+			Hibernate.vGetInstance().vInsert(xLanguage);
+			SpringApplication.run(SpringbootFirstAppApplication.class, args);
+		}
+
+			
+	}
+
+}

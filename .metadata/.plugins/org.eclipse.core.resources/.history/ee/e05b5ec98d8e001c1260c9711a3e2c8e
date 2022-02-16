@@ -1,0 +1,57 @@
+package com.springboot.app;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TranslateHistory")
+public class TranslateHistory {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long Id;
+	private String Date;
+	private String Data;
+	private String SourceLanguage;
+	private String TargetLanguage;
+	
+	@Override
+	public String toString() {
+		return "TranslateHistory [Id=" + Id + ", Date=" + Date + ", Data=" + Data + ", SourceLanguage=" + SourceLanguage
+				+ ", TargetLanguage=" + TargetLanguage + "]";
+	}
+	public long getId() {
+		return Id;
+	}
+	public void setId(long id) {
+		Id = id;
+	}
+	public String getDate() {
+		return Date;
+	}
+	public void setDate(String date) {
+		Date = date;
+	}
+	public String getData() {
+		return Data;
+	}
+	public void setData(String data) {
+		Data = data;
+	}
+	public String getSourceLanguage() {
+		return SourceLanguage;
+	}
+	public void setSourceLanguage(String sourceLanguage) {
+		SourceLanguage = sourceLanguage;
+	}
+	public String getTargetLanguage() {
+		return TargetLanguage;
+	}
+	public void setTargetLanguage(String targetLanguage) {
+		TargetLanguage = targetLanguage;
+	}
+	
+
+}
